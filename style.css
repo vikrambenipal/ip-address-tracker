@@ -13,8 +13,7 @@
   src: url(./Rubik/static/Rubik-Regular.ttf);
 }
 
-.header {
-  background-image: url(images/pattern-bg.png);
+.header, .info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,12 +27,46 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header {
+  background-image: url(images/pattern-bg.png);
+  background-repeat: no-repeat;
   margin: 0 auto;
-  padding-bottom: 20%;
+  padding-bottom: 150px;
 }
 
 .header h1 {
   font-family: 'rubik-medium';
   color: white;
+}
+
+.header #userInput {
+  height: 58px;
+  border-radius: 15px;
+  border: none;
+  width: 80vw;
+  max-width: 500px;
+}
+
+.header #submitButton {
+  height: 58px;
+  border-radius: 15px;
+  border: none;
+}
+
+.info-container {
+  border: 2px solid black;
+  -webkit-box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+          box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+  text-align: center;
+}
+
+.info-container p {
+  font-family: 'rubik-bold';
+}
+
+.info-container .value {
+  font-family: 'rubik-medium';
 }
 /*# sourceMappingURL=style.css.map */
