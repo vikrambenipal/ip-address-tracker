@@ -1,21 +1,32 @@
+// form variables
 const submit = document.getElementById('submitButton');
 const input = document.getElementById('userInput');
 const error = document.getElementById('error');
-
-// check if input is a valid ip address 
-// onSubmit call API and get info to populate fields 
-
+// output variables
+const ip_addr = document.getElementById('ip-addr');
+//const location = document.getElementById('location');
+const timezone = document.getElementById('timezone');
+const isp = document.getElementById('isp');
+// api key 
 const api_key = "at_A2hg6w4veqrY2FddQRLU4aaREDvfm";
-let ip = "8.8.8.8";
+let ip = "";
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    // Request API 
+    ip = input.value;
+    input.value = "";
+
     $.get({
         url: "https://geo.ipify.org/api/v1",
         data: {apiKey: api_key, ipAddress: ip},
         success: function(data) {
-            $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+            // $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+            console.log(data.ip);
+            console.log(data.location.country);
+            console.log(data.location.region);
+            console.log(data.location.postalCode);
+            console.log(data.location.timezone);
+            console.log(data.isp);
         }
     }).fail(function (){
         // invalid IP address case 
