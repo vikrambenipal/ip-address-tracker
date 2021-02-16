@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'rubik-medium';
+    src: url(./Rubik/static/Rubik-Medium.ttf);
+}
+@font-face{
+    font-family: 'rubik-bold';
+    src: url(./Rubik/static/Rubik-Bold.ttf);
+}
+@font-face{
+    font-family: 'rubik-regular';
+    src: url(./Rubik/static/Rubik-Regular.ttf);
+}
+
+.header {
+    background-image: url(images/pattern-bg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 20%;
+    h1 {
+        font-family: 'rubik-medium';
+        color: white;
+    }
+}
