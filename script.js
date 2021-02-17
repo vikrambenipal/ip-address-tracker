@@ -56,7 +56,7 @@ submit.addEventListener("click", (e) => {
             }
         }).fail(function (){
             // invalid IP address case 
-            error.innerText = "Error: Please enter a valid IP address";
+            error.innerText = "Please enter a valid IP address";
         })
     }
 })
