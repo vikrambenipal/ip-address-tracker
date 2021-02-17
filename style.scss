@@ -29,24 +29,40 @@
         color: white;
         font-size: 1.5rem;
     }
-    #userInput {
-        height: 58px;
+    form {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
         border-radius: 15px;
-        border: none;
-        width: 80vw;
-        max-width: 500px;
-        padding-left: 20px;
+        #userInput {
+            height: 58px;
+            border-radius: 15px;
+            border: none;
+            width: 80vw;
+            max-width: 500px;
+            padding-left: 20px;
+            flex-grow: 2;
+        }
+        #submitButton {
+            height: 60px;
+            width: 60px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: black;
+            color: black;
+            border: none;
+            cursor: pointer;
+            background-image: url(images/icon-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
-    #submitButton {
-        height: 58px;
-        border-radius: 15px;
-        border: none;
-    }
+    
 }
 
 .info-container {
     position: absolute;
-    top: 20%;
+    top: 17%;
     width: 90%;
     max-width: 1100px;
     box-shadow: 0px 50px 50px -25px rgba(0,0,0,0.1984);
@@ -70,5 +86,5 @@
 }
 
 #mapid {
-    height: 70vh
+    height: 73vh
 }

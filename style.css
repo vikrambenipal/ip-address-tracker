@@ -43,24 +43,47 @@
   font-size: 1.5rem;
 }
 
-.header #userInput {
+.header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.header form #userInput {
   height: 58px;
   border-radius: 15px;
   border: none;
   width: 80vw;
   max-width: 500px;
   padding-left: 20px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
-.header #submitButton {
-  height: 58px;
-  border-radius: 15px;
+.header form #submitButton {
+  height: 60px;
+  width: 60px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: black;
+  color: black;
   border: none;
+  cursor: pointer;
+  background-image: url(images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .info-container {
   position: absolute;
-  top: 20%;
+  top: 17%;
   width: 90%;
   max-width: 1100px;
   -webkit-box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1984);
@@ -86,6 +109,6 @@
 }
 
 #mapid {
-  height: 70vh;
+  height: 73vh;
 }
 /*# sourceMappingURL=style.css.map */
