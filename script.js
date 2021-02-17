@@ -11,6 +11,26 @@ const isp = document.getElementById('isp');
 const api_key = "at_A2hg6w4veqrY2FddQRLU4aaREDvfm";
 let ip = "";
 
+// Default Leaflet JS Position
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+var myicon = L.icon({
+    iconUrl: 'images/icon-location.svg',
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([51.5, -0.09], {icon: myicon}).addTo(mymap);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoidnVrMTM2IiwiYSI6ImNrbDlsYTM5MjA3c3cyd254ZTkxbWxwdGsifQ.pOK_bWvgJzN18TwSeJSY5A'
+}).addTo(mymap);
+
 submit.addEventListener("click", (e) => {
     e.preventDefault();
     error.innerText = "";

@@ -19,10 +19,10 @@
 }
 .header {
     background-image: url(images/pattern-bg.png);
-    background-repeat: no-repeat;
+    background-repeat:repeat-x;
     @extend %col-flex;
     margin: 0 auto;
-    padding-bottom: 150px;
+    // padding-bottom: 150px;
     h1 {
         font-family: 'rubik-medium';
         color: white;
@@ -33,6 +33,7 @@
         border: none;
         width: 80vw;
         max-width: 500px;
+        padding-left: 20px;
     }
     #submitButton {
         height: 58px;
@@ -53,4 +54,8 @@
     .value {
         font-family: 'rubik-medium';
     }
+}
+
+#mapid {
+    height: 500px;
 }

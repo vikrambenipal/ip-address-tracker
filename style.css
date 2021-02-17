@@ -31,9 +31,8 @@
 
 .header {
   background-image: url(images/pattern-bg.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   margin: 0 auto;
-  padding-bottom: 150px;
 }
 
 .header h1 {
@@ -47,6 +46,7 @@
   border: none;
   width: 80vw;
   max-width: 500px;
+  padding-left: 20px;
 }
 
 .header #submitButton {
@@ -68,5 +68,9 @@
 
 .info-container .value {
   font-family: 'rubik-medium';
+}
+
+#mapid {
+  height: 500px;
 }
 /*# sourceMappingURL=style.css.map */
