@@ -35,7 +35,7 @@ submit.addEventListener("click", (e) => {
     e.preventDefault();
     error.innerText = "";
     if(input.value == ""){
-        error.innerText = "Error: Please enter a valid IP address";
+        error.innerText = "Please enter a valid IP address";
     }else{
         ip = input.value;
         input.value = "";

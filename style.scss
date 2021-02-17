@@ -57,6 +57,12 @@
             background-position: center;
         }
     }
+    #error {
+        margin-top: 5px;
+        padding-bottom: 10px;
+        font-family: 'rubik-medium';
+        color: #EF4877;
+    }
     
 }
 
@@ -87,4 +93,28 @@
 
 #mapid {
     height: 73vh
+}
+
+@media all and (min-width: 1000px){
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -40px;
+        padding-bottom: 50px;
+        .info {
+            padding: 0 40px;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+    hr {
+        width: 10px;
+        border: 2px solid black;
+    }
 }
