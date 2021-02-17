@@ -49,6 +49,10 @@ submit.addEventListener("click", (e) => {
                 data.location.region + " " + data.location.postalCode;
                 timezone.innerText = "UTC " + data.location.timezone;
                 isp.innerText = data.isp;
+
+                // modify map state
+                mymap.panTo(new L.LatLng(data.location.lat, data.location.lng));
+                L.marker([data.location.lat, data.location.lng], {icon: myicon}).addTo(mymap);
             }
         }).fail(function (){
             // invalid IP address case 
