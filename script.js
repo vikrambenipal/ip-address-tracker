@@ -44,6 +44,7 @@ submit.addEventListener("click", (e) => {
             data: {apiKey: api_key, ipAddress: ip},
             success: function(data) {
                 // $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+                console.log(data);
                 ip_addr.innerText = data.ip;
                 loc.innerText = data.location.city + ", " + 
                 data.location.region + " " + data.location.postalCode;
