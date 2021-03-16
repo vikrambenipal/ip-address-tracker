@@ -10,6 +10,7 @@ const isp = document.getElementById('isp');
 // api key 
 const api_key = "at_A2hg6w4veqrY2FddQRLU4aaREDvfm";
 let ip = "";
+let domain = "";
 
 // Default Leaflet JS Position
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
@@ -37,14 +38,19 @@ submit.addEventListener("click", (e) => {
     if(input.value == ""){
         error.innerText = "Please enter a valid IP address";
     }else{
-        ip = input.value;
+
+        if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(input.value)){
+            ip = input.value;
+            domain = "";
+        }else{
+            ip = "";
+            domain = input.value;
+        }
         input.value = "";
         $.get({
             url: "https://geo.ipify.org/api/v1",
-            data: {apiKey: api_key, ipAddress: ip},
+            data: {apiKey: api_key, ipAddress: ip, domain: domain},
             success: function(data) {
-                // $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
-                console.log(data);
                 ip_addr.innerText = data.ip;
                 loc.innerText = data.location.city + ", " + 
                 data.location.region + " " + data.location.postalCode;
@@ -57,7 +63,7 @@ submit.addEventListener("click", (e) => {
             }
         }).fail(function (){
             // invalid IP address case 
-            error.innerText = "Please enter a valid IP address";
+            error.innerText = "Please enter a valid IP address or domain name";
         })
     }
 })
