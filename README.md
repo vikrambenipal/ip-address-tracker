@@ -1,5 +1,5 @@
 # IP Address Tracker
-## Built using Javascript, Leaflet.js and Mapbox API
+## Built using Javascript, SCSS, Leaflet.js and Mapbox API
 
 Users can type in an IP address or domain name and the map will reposition itself to that location. The map is also scrollable if you want to checkout any nearby locations from your destination! Check it out here: https://voluble-creponne-c2ca32.netlify.app/
 
